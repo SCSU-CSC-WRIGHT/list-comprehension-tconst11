@@ -54,6 +54,20 @@ Instructions:
 - Use a loop to iterate through each number in the list.
 - Use conditionals to determine if a number is even or odd and keep a count of each.
 - Print the counts of even and odd numbers.
+numbers_input = input("Enter multiple integers separated by spaces: ")
+numbers = [int(num) for num in numbers_input.split()]
+
+even_count = 0
+odd_count = 0
+
+for num in numbers:
+  if num % 2 ==0:
+    even_count += 1
+  else:
+    odd_count += 1
+
+print(f"Even numbers: {even_count}")
+print(f"Odd numbers: [odd_count}")
 
 #### Lab 3: Unique List Merger
 **Objective**: Create a program that merges two lists and removes duplicate items.

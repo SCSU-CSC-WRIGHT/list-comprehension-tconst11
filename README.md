@@ -14,6 +14,37 @@ C: 70-79
 D: 60-69
 F: below 60
 - Print the average score and corresponding letter grade.
+scores =[]
+
+while True:
+  score_imput = input("Enter a test score (or type 'done' to finish): ")
+
+  if score_input.lower() == 'done':
+    break
+  try:
+    score = floar(score_input)
+    scores.append(score)
+  except ValueError:
+    print("Invalid input. Please enter a valid number.")
+
+if len(scores) == 0:
+  print("no scores were entered.")
+else:
+  average_score = sum(scores) / len(scores)
+
+  if average_score >= 90:
+    grade = 'A'
+  elif average_score >= 80:
+    grade = 'B'
+  elif average_score >= 70:
+    grade = 'C'
+  elif average_score >= 60:
+    grade = 'D'
+  else:
+    grade = 'F'
+
+print(f"The average score is: {average_score;.2f}")
+print(f"the letter grade is: {grade}")
 
 
 #### Lab 2: Even and Odd Numbers Counter
